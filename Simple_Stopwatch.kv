@@ -1,0 +1,27 @@
+
+MainWidget:
+<MainWidget>:
+    AnchorLayout: 
+        
+        anchor_x: 'center'
+        anchor_y: 'center'
+        size_hint:.5,.3
+        BoxLayout:
+            orientation:'vertical'  
+            Label:
+                size_hint_y: 1.25
+                text:"00:00:00"
+                font_size:"100dp"
+            GridLayout:
+                cols:3
+                rows:1
+                padding:"20dp"
+                spacing:"20dp"
+                size_hint_y:1
+                
+                Button:
+                    text:"Start"
+                Button:
+                    text:"Stop"
+                Button:
+                    text:"Reset"

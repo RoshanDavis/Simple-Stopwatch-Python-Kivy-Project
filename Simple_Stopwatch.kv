@@ -20,8 +20,11 @@ MainWidget:
                 size_hint_y:1
                 
                 Button:
+                    on_press: root.on_press_start()
                     text:"Start"
                 Button:
+                    on_press: root.on_press_stop()
                     text:"Stop"
                 Button:
+                    on_press: root.on_press_reset()
                     text:"Reset"

@@ -1,6 +1,4 @@
 
-from sqlite3 import Time
-from time import time
 from kivy.app import App
 from kivy.uix.anchorlayout import AnchorLayout
 from kivy.properties import Clock
@@ -51,6 +49,7 @@ class MainWidget(AnchorLayout):
         self.sec=0
         self.min=0
         self.hr=0
+        self.Time_Cal(0)
 class Simple_StopwatchApp(App):
     pass
 

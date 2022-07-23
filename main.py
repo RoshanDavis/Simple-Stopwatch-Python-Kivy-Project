@@ -3,6 +3,9 @@ from kivy.app import App
 from kivy.uix.anchorlayout import AnchorLayout
 from kivy.properties import Clock
 from kivy.properties import StringProperty
+from kivy.lang.builder import Builder
+
+
 class MainWidget(AnchorLayout):
     time_label=StringProperty("00:00:00")
     time_cal=0.0
@@ -12,6 +15,7 @@ class MainWidget(AnchorLayout):
     timer_on=False
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
+        
         Clock.schedule_interval(self.update,1/60)
     
 
@@ -50,7 +54,8 @@ class MainWidget(AnchorLayout):
         self.min=0
         self.hr=0
         self.Time_Cal(0)
-class Simple_StopwatchApp(App):
-    pass
+class StopwatchApp(App):
+    def build(self):
+        return Builder.load_file('stopwatch.kv')
 
-Simple_StopwatchApp().run()
+StopwatchApp().run()

@@ -1,10 +1,11 @@
 
+##Hellooo##
+
 from kivy.app import App
 from kivy.uix.anchorlayout import AnchorLayout
 from kivy.properties import Clock
 from kivy.properties import StringProperty
 from kivy.lang.builder import Builder
-
 
 class MainWidget(AnchorLayout):
     time_label=StringProperty("00:00:00")
